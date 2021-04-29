@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  overview: MyString
+  vote_count: 1
+  poster_path: MyString
+  release_date: 2021-04-29
+
+two:
+  title: MyString
+  overview: MyString
+  vote_count: 1
+  poster_path: MyString
+  release_date: 2021-04-29
