@@ -22,17 +22,17 @@ You need actualized
 
 **Api info** (job queues, cache servers, search engines, etc.)
 
-|Prefix|Verb|URI Pattern|Controller#Action
-| --- | --- | --- |
-|api_movies | GET  |  /api/movies(.:format) | api/movies#index {:params=>:title}|
-|           | POST | /api/movies(.:format)  | api/movies#create {:params=>:title}|
-|new_api_movie| GET |   /api/movies/new(.:format) |  api/movies#new {:params=>:title}
-|edit_api_movie| GET |   /api/movies/:id/edit(.:format)   | api/movies#edit {:params=>:title}
-|api_movie |GET  |  /api/movies/:id(.:format)  | api/movies#show {:params=>:title}
-|          |PATCH | /api/movies/:id(.:format)  | api/movies#update {:params=>:title}
-|          |PUT |   /api/movies/:id(.:format)   | api/movies#update {:params=>:title}
-|          |DELETE | /api/movies/:id(.:format)   | api/movies#destroy {:params=>:title}
-|api_search| GET  |  /api/search(.:format)  | api/movies#search {:params=>:title}
+|  Prefix   |Verb  |     URI Pattern           |      Controller#Action                    |
+| --------- | ---- | ------------------------- | ------------------------------------------|
+|api_movies | GET  |  /api/movies(.:format)    | api/movies#index {:params=>:title}|
+|           | POST | /api/movies(.:format)     | api/movies#create {:params=>:title}|
+|new_api_movie| GET |   /api/movies/new(.:format) |  api/movies#new {:params=>:title}|
+|edit_api_movie| GET |   /api/movies/:id/edit(.:format)   | api/movies#edit {:params=>:title}|
+|api_movie |GET  |  /api/movies/:id(.:format)  | api/movies#show {:params=>:title}|
+|          |PATCH | /api/movies/:id(.:format)  | api/movies#update {:params=>:title}|
+|          |PUT |   /api/movies/:id(.:format)   | api/movies#update {:params=>:title}|
+|          |DELETE | /api/movies/:id(.:format)   | api/movies#destroy {:params=>:title}|
+|api_search| GET  |  /api/search(.:format)  | api/movies#search {:params=>:title}|
 
 **Deployment**
 
