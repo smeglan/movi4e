@@ -6,7 +6,7 @@ class CreateMovies < ActiveRecord::Migration[6.1]
       t.integer :vote_count
       t.string :poster_path
       t.date :release_date
-
+      t.binary :poster_image
       t.timestamps
     end
   end

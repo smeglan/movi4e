@@ -2,19 +2,20 @@ import React, { Fragment, useEffect, useState } from 'react'
 import axios from 'axios';
 import MovieCard from './components/movie_card';
 import { Container, Row } from 'react-bootstrap';
-import SearchBar from '../shared/search_bar'
+import SearchBar from '../../shared/search_bar'
 const Movies = () => {
 
     const [movies, setMovies] = useState([]);
-    const [searchedMovie, setSearchedMovie] = useState([]);
+    const [searchedMovies, setSearchedMovies] = useState([]);
 
     useEffect(() => {
         axios.get('/api/movies.json')
             .then(response => {
-                setMovies(response.data.data);
+                const data = response.data.data
+                setMovies(data.reverse());
             })
             .catch(e => console.log(e));
-    }, [setMovies.length])
+    }, [setMovies.length, searchedMovies])
 
     const list = movies.map((item, i) => {
         return (
@@ -23,15 +24,21 @@ const Movies = () => {
     })
     return (
         <Fragment>
-            <SearchBar></SearchBar>
+            <SearchBar setList={setSearchedMovies}></SearchBar>
             <Container style={{ width: "90%" }}>
-                {searchedMovie.length > 0 &&
+                {searchedMovies && searchedMovies.length > 0 &&
                     <div>
                         <div>
                             <h2>Searched movies</h2>
                         </div>
                         <Row>
-                            {list}
+                            {
+                                searchedMovies.map((item, i) => {
+                                    return (
+                                        <MovieCard key={item.title + i} movie={item} />
+                                    )
+                                })
+                            }
                         </Row>
                     </div>
                 }

@@ -13,3 +13,12 @@
  *= require_tree .
  *= require_self
  */
+$hoverBgColor: #4b9252;
+$hoverBgColor2: #a9ffb2;
+.card {
+  &:hover {
+    cursor: pointer;
+    background: linear-gradient(130deg, $hoverBgColor 0%, $hoverBgColor2 100%);
+    box-shadow: none;
+  }
+}

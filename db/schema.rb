@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_04_29_064024) do
     t.integer "vote_count"
     t.string "poster_path"
     t.date "release_date"
+    t.binary "poster_image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
