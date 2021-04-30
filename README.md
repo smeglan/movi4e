@@ -1,24 +1,43 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**You may need**.
+* Ruby version ^2.7.x 
+* Rails version ^6.1.x 
+* Node.js version ^12.x
+* Postgress SQL
 
-Things you may want to cover:
+You need actualized
 
-* Ruby version
+**Database creation**
 
-* System dependencies
+> rails db:create
 
-* Configuration
+**Database initialization**
 
-* Database creation
+> rails db:migrate
 
-* Database initialization
+**Note**: opcionally if you want some examples run 
 
-* How to run the test suite
+> rails db:seed
 
-* Services (job queues, cache servers, search engines, etc.)
+**Api info** (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+|Prefix|Verb|URI Pattern|Controller#Action
+| --- | --- | --- |
+|api_movies | GET  |  /api/movies(.:format) | api/movies#index {:params=>:title}|
+|           | POST | /api/movies(.:format)  | api/movies#create {:params=>:title}|
+|new_api_movie| GET |   /api/movies/new(.:format) |  api/movies#new {:params=>:title}
+|edit_api_movie| GET |   /api/movies/:id/edit(.:format)   | api/movies#edit {:params=>:title}
+|api_movie |GET  |  /api/movies/:id(.:format)  | api/movies#show {:params=>:title}
+|          |PATCH | /api/movies/:id(.:format)  | api/movies#update {:params=>:title}
+|          |PUT |   /api/movies/:id(.:format)   | api/movies#update {:params=>:title}
+|          |DELETE | /api/movies/:id(.:format)   | api/movies#destroy {:params=>:title}
+|api_search| GET  |  /api/search(.:format)  | api/movies#search {:params=>:title}
 
-* ...
+**Deployment**
+
+>rails s
+
+**or**
+
+>ruby bin/rails server
