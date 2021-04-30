@@ -6,19 +6,22 @@
 * Node.js version ^12.x
 * Postgress SQL
 
-You need actualized
-
 **Database creation**
-
-> rails db:create
+```
+rails db:create
+```
 
 **Database initialization**
 
-> rails db:migrate
+```
+rails db:migrate
+```
 
 **Note**: opcionally if you want some examples run 
 
-> rails db:seed
+```
+rails db:seed
+```
 
 **Api info** (job queues, cache servers, search engines, etc.)
 
@@ -36,8 +39,20 @@ You need actualized
 
 **Deployment**
 
->rails s
+Before to run, don't forget run
+```
+yarn install
 
+bundle install
+```
+Because the project contains some gems(like HTTParty or fast_jsonapi) and node libraries(like axios or react-bootstrap)
+
+**Run project**
+```
+rails s
+```
 **or**
 
->ruby bin/rails server
+```
+ruby bin/rails server
+```
