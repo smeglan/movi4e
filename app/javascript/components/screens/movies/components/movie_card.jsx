@@ -6,7 +6,6 @@ const MovieCard = (props) => {
     const { movie } = props;
     const history = useHistory();
     const getPath = ()=>{
-        console.log(movie)
         if(movie.poster_path){
             return "https://image.tmdb.org/t/p/w500" + movie.poster_path;
         }else if(movie.poster_image){

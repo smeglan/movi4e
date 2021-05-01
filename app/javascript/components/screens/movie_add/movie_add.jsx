@@ -32,7 +32,9 @@ const MovieAdd = () => {
             poster_image: posterImage
         }
         axios.post("/api/movies", newMovie)
-            .then(response => { console.log("OK!") })
+            .then(response => {
+                history.push("/")
+            })
             .catch(e => console.log(e))
     }
 

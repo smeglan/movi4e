@@ -25,7 +25,6 @@ module Api
 
         def show
             movie = Movie.find_by(title: params[:title])
-            puts "show"
             render json: MovieSerializer.new(movie).serialized_json
         end
 

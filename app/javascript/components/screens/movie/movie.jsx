@@ -15,10 +15,8 @@ const Movie = () => {
 
     useEffect(() => {
         const title = query.get("title")
-        console.log(title)
         axios.get("/api/movies/id?title=" + title)
             .then(response => {
-                console.log(response.data)
                 if (response.data.data) {
                     setItem(response.data.data.attributes)
                 }
